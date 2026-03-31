@@ -78,7 +78,7 @@ jobs:
           echo "VERSION_LABEL=$VERSION_LABEL" >> $GITHUB_ENV
 
       - name: Create Beanstalk application version
-         run: |
+        run: |
            aws elasticbeanstalk create-application-version \
              --application-name ${{ secrets.EB_APPLICATION_NAME }} \
              --version-label ${{ env.VERSION_LABEL }} \
